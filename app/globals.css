@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  /* Mazuri Energy brand – from logo */
+  --color-navy: #0d2137;
+  --color-navy-light: #1a365d;
+  --color-gold: #e5a00d;
+  --color-gold-light: #f0c14b;
+  --color-white: #ffffff;
+  --color-off-white: #f7f8fa;
+  --color-text: #1a365d;
+  --color-text-muted: #4a5568;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-off-white);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+}
+
+@keyframes conveyor {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+.animate-conveyor-slow {
+  animation: conveyor 55s linear infinite;
+}
