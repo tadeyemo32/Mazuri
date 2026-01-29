@@ -2,7 +2,7 @@ import {
   Hero,
   WeAreHere,
   Stats,
-  ConveyorBelt,
+  CertificationsPartners,
   ServicesPreview,
   WhyChooseUs,
   CTABanner,
@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <ConveyorBelt />
+      <CertificationsPartners />
       <Stats />
       <ServicesPreview />
       <WhyChooseUs />

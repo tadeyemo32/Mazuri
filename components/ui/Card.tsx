@@ -17,8 +17,8 @@ export default function Card({
   return (
     <div
       className={cn(
-        "bg-white border border-gray-200 rounded-lg p-6",
-        hover && "hover:border-[#0d2137]/20 hover:shadow-md transition-all duration-200",
+        "bg-[var(--color-bg-card)] border border-white/10 rounded-lg p-6 text-[var(--color-text)]",
+        hover && "hover:border-white/20 hover:shadow-lg hover:shadow-black/10 transition-all duration-200",
         className
       )}
     >

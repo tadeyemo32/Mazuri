@@ -18,10 +18,10 @@ export default function FadeIn({
   duration = 0.5,
   className = "",
   direction = "up",
-  distance = 20,
+  distance = 28,
 }: FadeInProps) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-60px", amount: 0.2 });
+  const isInView = useInView(ref, { once: true, margin: "0px 0px -80px 0px", amount: 0.15 });
 
   const getInitialPosition = () => {
     switch (direction) {

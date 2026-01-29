@@ -16,13 +16,13 @@ export default function Footer() {
       <div className="container mx-auto px-6 py-14">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           <div className="lg:col-span-1">
-            <Link href="/" className="inline-block mb-6 bg-white rounded px-3 py-2 w-fit">
+            <Link href="/" className="inline-block mb-6 w-fit">
               <Image
-                src="/mazuri-logo.jpg"
+                src="/mazuri.png"
                 alt="Mazuri Energy"
-                width={130}
-                height={40}
-                className="h-8 w-auto object-contain"
+                width={200}
+                height={60}
+                className="h-12 md:h-14 w-auto object-contain"
               />
             </Link>
             <p className="text-white/70 text-sm leading-relaxed max-w-[260px]">

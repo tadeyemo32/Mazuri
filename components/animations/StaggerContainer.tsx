@@ -17,7 +17,7 @@ export default function StaggerContainer({
   className = "",
 }: StaggerContainerProps) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-60px", amount: 0.15 });
+  const isInView = useInView(ref, { once: true, margin: "0px 0px -80px 0px", amount: 0.15 });
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -51,12 +51,12 @@ export function StaggerItem({
   className?: string;
 }) {
   const itemVariants = {
-    hidden: { opacity: 0, y: 24 },
+    hidden: { opacity: 0, y: 32 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.55,
+        duration: 0.5,
         ease: [0.22, 1, 0.36, 1],
       },
     },
