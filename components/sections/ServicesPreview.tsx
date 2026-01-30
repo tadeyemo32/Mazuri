@@ -1,9 +1,10 @@
 "use client";
 
+import { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Search, Factory, Truck, MessageSquare } from "lucide-react";
-import { FadeIn } from "@/components/animations";
+import { FadeIn, SlideIn, ParallaxSection } from "@/components/animations";
 import { Section, SectionHeader } from "@/components/layout/Section";
 import Card from "@/components/ui/Card";
 
@@ -38,21 +39,27 @@ const services = [
 ];
 
 export default function ServicesPreview() {
+  const sectionRef = useRef<HTMLDivElement>(null);
   return (
-    <Section variant="white" noPadding>
-      <div className="relative h-56 md:h-72 lg:h-80 w-full">
-        <Image
-          src={OPERATIONS_IMAGE}
-          alt="Oil and gas refining and operations"
-          fill
-          className="object-cover"
-          sizes="100vw"
-          quality={90}
-          priority={false}
-        />
-        <div className="absolute inset-0 bg-[var(--color-navy)]/40" aria-hidden />
-      </div>
-      <div className="container mx-auto px-6 max-w-7xl py-16 md:py-24">
+    <Section variant="white" noPadding className="overflow-hidden">
+      <div ref={sectionRef} className="block w-full m-0 p-0">
+        <SlideIn direction="right" distance={140} className="block w-full m-0 aspect-[21/9] overflow-hidden">
+          <ParallaxSection containerRef={sectionRef} intensity={40} className="block w-full h-full m-0">
+            <div className="relative w-full h-full overflow-hidden">
+              <Image
+                src={OPERATIONS_IMAGE}
+                alt="Oil and gas refining and operations"
+                fill
+                className="object-cover object-center"
+                sizes="100vw"
+                quality={90}
+                priority={false}
+              />
+              <div className="absolute inset-0 bg-[var(--color-navy)]/40" aria-hidden />
+            </div>
+          </ParallaxSection>
+        </SlideIn>
+        <div className="container mx-auto px-6 max-w-7xl py-16 md:py-24">
         <FadeIn>
           <SectionHeader
             overline="02. Our operations"
@@ -83,6 +90,7 @@ export default function ServicesPreview() {
             View all services
             <span aria-hidden>→</span>
           </Link>
+        </div>
         </div>
       </div>
     </Section>

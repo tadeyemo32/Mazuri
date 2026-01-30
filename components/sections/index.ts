@@ -5,3 +5,4 @@ export { default as CertificationsPartners } from "./CertificationsPartners";
 export { default as ServicesPreview } from "./ServicesPreview";
 export { default as WhyChooseUs } from "./WhyChooseUs";
 export { default as CTABanner } from "./CTABanner";
+export { default as ComingSoon } from "./ComingSoon";

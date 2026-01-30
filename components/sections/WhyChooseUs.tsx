@@ -1,7 +1,8 @@
 "use client";
 
+import { useRef } from "react";
 import Image from "next/image";
-import { FadeIn } from "@/components/animations";
+import { FadeIn, SlideIn, ParallaxSection } from "@/components/animations";
 import { Section, SectionHeader } from "@/components/layout/Section";
 import Card from "@/components/ui/Card";
 
@@ -29,20 +30,26 @@ const philosophy = [
 ];
 
 export default function WhyChooseUs() {
+  const sectionRef = useRef<HTMLDivElement>(null);
   return (
-    <Section variant="off-white" noPadding>
-      <div className="relative h-64 md:h-80 lg:h-96 w-full">
-        <Image
-          src={PHILOSOPHY_IMAGE}
-          alt="Energy sector teamwork and operations"
-          fill
-          className="object-cover"
-          sizes="100vw"
-          quality={90}
-        />
-        <div className="absolute inset-0 bg-[var(--color-navy)]/30" aria-hidden />
-      </div>
-      <div className="container mx-auto px-6 max-w-7xl py-16 md:py-24">
+    <Section variant="off-white" noPadding className="overflow-hidden">
+      <div ref={sectionRef} className="block w-full m-0 p-0">
+        <SlideIn direction="left" distance={140} className="block w-full m-0 aspect-[21/9] overflow-hidden">
+          <ParallaxSection containerRef={sectionRef} intensity={40} className="block w-full h-full m-0">
+            <div className="relative w-full h-full overflow-hidden">
+              <Image
+                src={PHILOSOPHY_IMAGE}
+                alt="Energy sector teamwork and operations"
+                fill
+                className="object-cover object-center"
+                sizes="100vw"
+                quality={90}
+              />
+              <div className="absolute inset-0 bg-[var(--color-navy)]/30" aria-hidden />
+            </div>
+          </ParallaxSection>
+        </SlideIn>
+        <div className="container mx-auto px-6 max-w-7xl py-16 md:py-24">
         <FadeIn>
           <SectionHeader
             overline="03. Our corporate philosophy"
@@ -59,6 +66,7 @@ export default function WhyChooseUs() {
             </Card>
           ))}
         </div>
+      </div>
       </div>
     </Section>
   );

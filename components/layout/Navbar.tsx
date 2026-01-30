@@ -33,11 +33,11 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center shrink-0">
             <Image
-              src="/mazuri.png"
+              src="/mazuri.jpg"
               alt="Mazuri Energy"
-              width={280}
-              height={84}
-              className="h-14 md:h-20 w-auto object-contain"
+              width={320}
+              height={96}
+              className="h-16 md:h-24 w-auto object-contain"
               priority
             />
           </Link>

@@ -9,6 +9,8 @@ interface SlideInProps {
   duration?: number;
   className?: string;
   direction?: "left" | "right" | "up" | "down";
+  /** Travel distance in px (default 100) */
+  distance?: number;
 }
 
 export default function SlideIn({
@@ -17,6 +19,7 @@ export default function SlideIn({
   duration = 0.6,
   className = "",
   direction = "left",
+  distance = 100,
 }: SlideInProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "0px 0px -80px 0px", amount: 0.15 });
@@ -24,8 +27,8 @@ export default function SlideIn({
   const variants = {
     hidden: {
       opacity: 0,
-      x: direction === "left" ? -100 : direction === "right" ? 100 : 0,
-      y: direction === "up" ? 100 : direction === "down" ? -100 : 0,
+      x: direction === "left" ? -distance : direction === "right" ? distance : 0,
+      y: direction === "up" ? distance : direction === "down" ? -distance : 0,
     },
     visible: {
       opacity: 1,

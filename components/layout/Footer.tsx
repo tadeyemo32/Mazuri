@@ -18,7 +18,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-6 w-fit">
               <Image
-                src="/mazuri.png"
+                src="/mazuri.jpg"
                 alt="Mazuri Energy"
                 width={200}
                 height={60}
