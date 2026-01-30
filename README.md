@@ -102,3 +102,4 @@ Theme colors are defined in `app/globals.css`:
 ## License
 
 Private - Mazuri Oil & Energy Company
+# Mazuri
