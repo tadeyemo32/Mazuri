@@ -3,9 +3,10 @@ import type { Metadata } from "next";
 
 type Props = { params: Promise<{ slug: string }> };
 
-export async function generateMetadata({ params: _params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
   return {
-    title: "News | Mazuri Energy",
+    title: `${slug} | News | Mazuri Energy`,
     description: "Mazuri Energy – coming soon.",
   };
 }
