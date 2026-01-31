@@ -4,15 +4,12 @@ import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
 
 const quickLinks = [
   { label: "Home", href: "/" },
-  { label: "About Us", href: "/about" },
-  { label: "People", href: "/about#team" },
-  { label: "Services", href: "/services" },
-  { label: "Newsroom", href: "/newsroom" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0d2137] text-white">
+    <footer id="contact" className="bg-[#0d2137] text-white scroll-mt-20">
       <div className="container mx-auto px-6 py-14">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           <div className="lg:col-span-1">
@@ -20,13 +17,13 @@ export default function Footer() {
               <Image
                 src="/mazuri.jpg"
                 alt="Mazuri Energy"
-                width={200}
-                height={60}
-                className="h-12 md:h-14 w-auto object-contain"
+                width={300}
+                height={90}
+                className="h-20 md:h-24 w-auto object-contain"
               />
             </Link>
             <p className="text-white/70 text-sm leading-relaxed max-w-[260px]">
-              Harnessing value in oil and gas. Building infrastructure for Africa&apos;s energy economy.
+              Oil and gas exploration and production. Finding funding and providing technical services to unlock value from assets, focused on Africa, particularly Nigeria.
             </p>
             <a
               href="#"
@@ -60,8 +57,8 @@ export default function Footer() {
               <p className="flex items-start gap-2">
                 <MapPin size={16} className="shrink-0 mt-0.5 text-[#e5a00d]" />
                 Mazuri Energy Limited<br />
-                15 Marina Road, Lagos Island<br />
-                Lagos, Nigeria
+                7A, Floor 71, Cooper Road, Off Bourdillon<br />
+                Ikoyi, Lagos, Nigeria
               </p>
               <p className="flex items-center gap-2">
                 <Mail size={16} className="shrink-0 text-[#e5a00d]" />
@@ -69,7 +66,7 @@ export default function Footer() {
               </p>
               <p className="flex items-center gap-2">
                 <Phone size={16} className="shrink-0 text-[#e5a00d]" />
-                +234 800 123 4567
+                +234 908 290 0450
               </p>
             </address>
           </div>

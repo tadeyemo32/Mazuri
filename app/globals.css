@@ -1,9 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  /* Mazuri Energy – dark theme tokens */
+  /* Mazuri Energy – blue theme tokens */
   --color-navy: #0d2137;
   --color-navy-light: #1a365d;
+  --color-navy-lighter: #234d72;
   --color-navy-elevated: #152942;
   --color-gold: #e5a00d;
   --color-gold-light: #f0c14b;

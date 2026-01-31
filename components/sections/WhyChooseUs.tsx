@@ -6,21 +6,20 @@ import { FadeIn, SlideIn, ParallaxSection } from "@/components/animations";
 import { Section, SectionHeader } from "@/components/layout/Section";
 import Card from "@/components/ui/Card";
 
-const PHILOSOPHY_IMAGE =
-  "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop";
+const PHILOSOPHY_IMAGE = "/philosophy.jpg";
 
 const philosophy = [
   {
     number: "01",
-    title: "Our Vision",
+    title: "Our Focus",
     description:
-      "Mazuri Energy is focused on becoming a driving force in transforming Africa's energy sector, through promoting sustainable and cost-efficient development of the continent's hydrocarbon resources to deliver shared value for our stakeholders.",
+      "Oil and gas exploration and production company focused on Africa, particularly Nigeria. We help unlock value from assets through funding and technical services.",
   },
   {
     number: "02",
-    title: "Our Mission",
+    title: "Short-term Vision",
     description:
-      "To build an upstream company that strategically invests across the whole oil and gas value chain to maximize the value of our upstream assets and deliver positive impact on Africa's energy economy.",
+      "Find funding and provide technical services to asset owners, helping them unlock value from their oil and gas assets.",
   },
   {
     number: "03",
@@ -34,14 +33,14 @@ export default function WhyChooseUs() {
   return (
     <Section variant="off-white" noPadding className="overflow-hidden">
       <div ref={sectionRef} className="block w-full m-0 p-0">
-        <SlideIn direction="left" distance={140} className="block w-full m-0 aspect-[21/9] overflow-hidden">
+        <SlideIn direction="left" distance={140} className="block w-full m-0 h-64 md:h-80 overflow-hidden">
           <ParallaxSection containerRef={sectionRef} intensity={40} className="block w-full h-full m-0">
             <div className="relative w-full h-full overflow-hidden">
               <Image
                 src={PHILOSOPHY_IMAGE}
                 alt="Energy sector teamwork and operations"
                 fill
-                className="object-cover object-center"
+                className="object-cover object-bottom"
                 sizes="100vw"
                 quality={90}
               />
@@ -52,8 +51,8 @@ export default function WhyChooseUs() {
         <div className="container mx-auto px-6 max-w-7xl py-16 md:py-24">
         <FadeIn>
           <SectionHeader
-            overline="03. Our corporate philosophy"
-            title="Our workforce is our greatest resource. We operate with unwavering dedication, consistent excellence, and timely results."
+            overline="03. Our philosophy"
+            title="We operate with unwavering dedication, consistent excellence, and timely results."
           />
         </FadeIn>
 

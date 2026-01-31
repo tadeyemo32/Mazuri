@@ -17,7 +17,7 @@ export default function WeAreHere() {
               <div>
                 <p className="font-medium text-[var(--color-text)]">Address</p>
                 <p className="text-[var(--color-text-muted)] text-sm mt-0.5">
-                  15 Marina Road, Lagos Island, Lagos, Nigeria
+                  7A, Floor 71, Cooper Road, Off Bourdillon, Ikoyi, Lagos, Nigeria
                 </p>
               </div>
             </div>
@@ -32,7 +32,7 @@ export default function WeAreHere() {
               <Clock className="w-5 h-5 text-[var(--color-gold)] shrink-0 mt-0.5" />
               <div>
                 <p className="font-medium text-[var(--color-text)]">Opening hours</p>
-                <p className="text-[var(--color-text-muted)] text-sm mt-0.5">Monday to Friday, 8:00 am — 6:00 pm</p>
+                <p className="text-[var(--color-text-muted)] text-sm mt-0.5">Monday to Friday, 8:00 am to 6:00 pm</p>
               </div>
             </div>
           </div>

@@ -22,7 +22,7 @@ function BeltSegment() {
         </span>
       ))}
       <span className="text-[#0d2137]/40" aria-hidden>
-        —
+        -
       </span>
     </span>
   );

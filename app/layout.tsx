@@ -10,9 +10,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Mazuri Energy | Oil & Energy",
-  description: "Mazuri Energy. Oil exploration, production, refining and distribution.",
-  keywords: ["Mazuri Energy", "oil", "energy", "petroleum", "exploration", "refining"],
+  title: "Mazuri Energy | Oil & Gas E&P",
+  description: "Mazuri Energy. Oil and gas exploration and production focused on Africa, particularly Nigeria. Funding and technical services to unlock value from assets.",
+  keywords: ["Mazuri Energy", "oil", "gas", "exploration", "production", "Nigeria", "Africa", "E&P"],
 };
 
 export default function RootLayout({

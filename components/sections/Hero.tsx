@@ -1,12 +1,9 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
 import { FadeIn, Parallax } from "@/components/animations";
-import Button from "@/components/ui/Button";
 
-const HERO_IMAGE =
-  "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop";
+const HERO_IMAGE = "/hero.jpg";
 
 export default function Hero() {
   return (
@@ -31,27 +28,13 @@ export default function Hero() {
         <div className="max-w-3xl">
           <FadeIn duration={0.6} delay={0.05}>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
-              Integrated upstream, midstream, and downstream operations across West Africa.
+              Oil and gas exploration and production, focused on Africa, particularly Nigeria.
             </h1>
           </FadeIn>
           <FadeIn delay={0.15} duration={0.5}>
-            <p className="text-lg text-white/90 mb-10 max-w-2xl leading-relaxed">
-              Mazuri Energy develops and operates across the oil and gas value chain—exploration, production, logistics, and refining—with a focus on safety, sustainability, and long-term value for the regions we serve.
+            <p className="text-lg text-white/90 max-w-2xl leading-relaxed">
+              We find funding and provide technical services to asset owners, helping unlock value from oil and gas assets.
             </p>
-          </FadeIn>
-          <FadeIn delay={0.25} duration={0.5}>
-            <div className="flex flex-wrap gap-4">
-              <Link href="/services">
-                <Button variant="secondary" size="lg">
-                  Operations
-                </Button>
-              </Link>
-              <Link href="/contact">
-                <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-[var(--color-navy)]">
-                  Contact
-                </Button>
-              </Link>
-            </div>
           </FadeIn>
         </div>
       </div>

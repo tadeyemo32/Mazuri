@@ -7,6 +7,7 @@ interface SectionProps {
   className?: string;
   /** Skip default padding (e.g. for full-bleed image) */
   noPadding?: boolean;
+  id?: string;
 }
 
 const variantClass = {
@@ -20,9 +21,11 @@ function Section({
   variant = "off-white",
   className = "",
   noPadding = false,
+  id,
 }: SectionProps) {
   return (
     <section
+      id={id}
       className={`${variantClass[variant]} ${noPadding ? "py-0" : "py-16 md:py-24"} ${className}`}
     >
       {children}

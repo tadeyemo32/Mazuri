@@ -10,7 +10,7 @@ const CERTIFICATIONS = [
   "ISO 45001",
 ];
 
-const PARTNER_LABEL = "Operations across West Africa";
+const PARTNER_LABEL = "Focused on Africa, particularly Nigeria";
 
 export default function CertificationsPartners() {
   return (

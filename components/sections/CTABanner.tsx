@@ -15,7 +15,7 @@ export default function CTABanner() {
           <p className="text-white/80 max-w-lg mx-auto mb-8">
             For enquiries, partnerships or general information, contact our team.
           </p>
-          <Link href="/contact">
+          <Link href="#contact">
             <Button variant="secondary" size="lg">
               Contact us
             </Button>

@@ -5,14 +5,11 @@ import Image from "next/image";
 import { FadeIn, SlideIn, ParallaxSection, Counter } from "@/components/animations";
 import { Section, SectionHeader } from "@/components/layout/Section";
 
-const GOAL_IMAGE =
-  "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop";
+const GOAL_IMAGE = "/stats.jpg";
 
 const stats = [
-  { value: 21, suffix: "", label: "Projects completed in 5 years" },
-  { value: 105, suffix: "", label: "Communities that rely on us" },
-  { value: 25, suffix: "+", label: "Years in operation" },
-  { value: 15, suffix: "+", label: "Countries" },
+  { value: 25, suffix: "+", label: "Years of oil & gas experience" },
+  { value: 21, suffix: "", label: "Assets and projects supported" },
 ];
 
 export default function Stats() {
@@ -38,13 +35,13 @@ export default function Stats() {
         <div className="order-1 lg:order-2 flex flex-col justify-center py-16 md:py-24 px-6 lg:pl-16 lg:pr-12 max-w-7xl mx-auto w-full">
           <FadeIn>
             <SectionHeader
-              overline="01. Our goal"
-              title="Advancing Oil & Gas Development to Deliver Positive Impact on Africa's Energy Economy."
-              description="At Mazuri Energy, our specialty lies in unlocking value in Africa's oil and gas resources—revitalizing assets with solutions that secure longevity, enhance operational efficiency, produced water management, improved evacuation logistics, gas development, and infrastructure."
+              overline="01. What we do"
+              title="Unlocking value from oil and gas assets."
+              description="We secure funding and deliver technical services for asset owners, focused on Africa, particularly Nigeria, to help maximize the value of their exploration and production assets."
             />
           </FadeIn>
 
-          <div className="grid grid-cols-2 gap-6 lg:gap-8">
+          <div className="flex flex-wrap gap-10 lg:gap-12">
             {stats.map((stat, index) => (
               <div key={stat.label}>
                 <div className="text-3xl md:text-4xl font-bold text-[var(--color-text)] mb-0.5">
