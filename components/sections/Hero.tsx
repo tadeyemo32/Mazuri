@@ -24,7 +24,7 @@ export default function Hero() {
         </div>
       </Parallax>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 max-w-7xl relative z-10">
         <div className="max-w-3xl">
           <FadeIn duration={0.6} delay={0.05}>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
@@ -32,8 +32,11 @@ export default function Hero() {
             </h1>
           </FadeIn>
           <FadeIn delay={0.15} duration={0.5}>
-            <p className="text-lg text-white/90 max-w-2xl leading-relaxed">
+            <p className="text-lg text-white/90 max-w-2xl leading-relaxed mb-4">
               We find funding and provide technical services to asset owners, helping unlock value from oil and gas assets.
+            </p>
+            <p className="text-base text-white/80 max-w-2xl leading-relaxed">
+              Strategic consultants with industry-successful seniors and extensive experience.
             </p>
           </FadeIn>
         </div>

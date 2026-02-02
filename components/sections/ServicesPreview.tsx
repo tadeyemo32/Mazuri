@@ -28,15 +28,15 @@ const services = [
   {
     icon: MessageSquare,
     title: "Consulting & Advisory",
-    description: "Strategy and operational support.",
+    description: "Strategic consulting from industry-successful seniors with extensive experience.",
     href: "#services",
   },
 ];
 
 export default function ServicesPreview() {
   return (
-    <Section id="services" variant="white" className="scroll-mt-20">
-      <div className="container mx-auto px-6 max-w-7xl">
+    <Section id="services" variant="white" className="scroll-mt-20 overflow-x-hidden">
+      <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
         <FadeIn>
           <SectionHeader
             overline="02. Our services"

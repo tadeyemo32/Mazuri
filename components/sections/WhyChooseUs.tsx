@@ -26,6 +26,12 @@ const philosophy = [
     title: "Our Core Values",
     description: "Accountability · Execution competence · Curiosity · Integrity · Collaboration.",
   },
+  {
+    number: "04",
+    title: "Strategic Consulting",
+    description:
+      "Strategic consultants with industry-successful seniors and extensive experience across oil and gas.",
+  },
 ];
 
 export default function WhyChooseUs() {
@@ -56,7 +62,7 @@ export default function WhyChooseUs() {
           />
         </FadeIn>
 
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {philosophy.map((item) => (
             <Card key={item.number}>
               <p className="text-2xl font-bold text-[var(--color-gold)] mb-3">{item.number}</p>

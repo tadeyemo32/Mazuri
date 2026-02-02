@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 const quickLinks = [
   { label: "Home", href: "/" },
@@ -9,29 +9,23 @@ const quickLinks = [
 
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-[#0d2137] text-white scroll-mt-20">
-      <div className="container mx-auto px-6 py-14">
+    <footer id="contact" className="bg-[#0d2137] text-white scroll-mt-20 overflow-x-hidden">
+      <div className="container mx-auto px-4 sm:px-6 py-10 md:py-14">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-6 w-fit">
               <Image
-                src="/mazuri.jpg"
+                src="/logo.png"
                 alt="Mazuri Energy"
-                width={300}
-                height={90}
-                className="h-20 md:h-24 w-auto object-contain"
+                width={360}
+                height={108}
+                className="h-24 md:h-28 w-auto object-contain [filter:drop-shadow(0_0_1px_rgba(255,255,255,0.5))]"
+                unoptimized
               />
             </Link>
             <p className="text-white/70 text-sm leading-relaxed max-w-[260px]">
               Oil and gas exploration and production. Finding funding and providing technical services to unlock value from assets, focused on Africa, particularly Nigeria.
             </p>
-            <a
-              href="#"
-              className="inline-flex items-center gap-2 mt-4 text-white/80 hover:text-[#e5a00d] text-sm transition-colors"
-            >
-              <Linkedin size={18} />
-              Follow us
-            </a>
           </div>
 
           <div>

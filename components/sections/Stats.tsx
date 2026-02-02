@@ -9,7 +9,6 @@ const GOAL_IMAGE = "/stats.jpg";
 
 const stats = [
   { value: 25, suffix: "+", label: "Years of oil & gas experience" },
-  { value: 21, suffix: "", label: "Assets and projects supported" },
 ];
 
 export default function Stats() {
@@ -32,7 +31,7 @@ export default function Stats() {
           </ParallaxSection>
         </SlideIn>
 
-        <div className="order-1 lg:order-2 flex flex-col justify-center py-16 md:py-24 px-6 lg:pl-16 lg:pr-12 max-w-7xl mx-auto w-full">
+        <div className="order-1 lg:order-2 flex flex-col justify-center py-12 md:py-24 px-4 sm:px-6 lg:pl-16 lg:pr-12 max-w-7xl mx-auto w-full">
           <FadeIn>
             <SectionHeader
               overline="01. What we do"

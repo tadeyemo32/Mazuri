@@ -6,7 +6,7 @@ export default function ComingSoon() {
     <section className="min-h-[80vh] flex flex-col items-center justify-center px-6 py-24 bg-[var(--color-bg)] text-[var(--color-text)]">
       <Link href="/" className="mb-12 block">
         <Image
-          src="/mazuri.jpg"
+          src="/logo.png"
           alt="Mazuri Energy"
           width={200}
           height={60}
