@@ -1,10 +1,11 @@
 import { NextResponse } from "next/server";
 import { siteUrl } from "@/lib/seo";
+
 const lastmod = new Date().toISOString().split("T")[0];
 
 /**
  * Sitemap index (sitemaps.org) listing all child sitemaps.
- * Submit this URL to search engines when using multiple sitemaps.
+ * Served at /sitemap_index.xml via next.config rewrite for crawler compatibility.
  */
 export function GET() {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
