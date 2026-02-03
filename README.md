@@ -99,6 +99,12 @@ Theme colors are defined in `app/globals.css`:
 2. Add a `page.tsx` file
 3. Import existing components or create new sections
 
+## SEO & discoverability
+
+- **Sitemap:** Submit `https://your-domain.com/sitemap_index.xml` (index listing all sitemaps) or `https://your-domain.com/sitemap.xml` (URL list) in [Google Search Console](https://search.google.com/search-console) and [Bing Webmaster Tools](https://www.bing.com/webmasters).
+- **Verification:** Replace the placeholder verification codes in `app/layout.tsx` (`verification.google` and `verification.other["msvalidate.01"]`) with the codes from each tool after adding the property.
+- **Backlinks:** The site uses canonicals, absolute URLs in schema, and a sitemap to stay easy to cite. Earning backlinks is done via outreach, content, directories, press, and partners—not in code.
+
 ## License
 
 Private - Mazuri Oil & Energy Company

@@ -1,14 +1,14 @@
 import type { MetadataRoute } from "next";
-
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://mazurienergy.com";
+import { siteUrl } from "@/lib/seo";
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: {
-      userAgent: "*",
-      allow: "/",
-      disallow: ["/api/"],
-    },
-    sitemap: `${baseUrl}/sitemap.xml`,
+    rules: [
+      { userAgent: "*", allow: "/", disallow: ["/api/"] },
+      { userAgent: "Googlebot", allow: "/", disallow: ["/api/"] },
+      { userAgent: "Bingbot", allow: "/", disallow: ["/api/"] },
+      { userAgent: "Slurp", allow: "/", disallow: ["/api/"] },
+    ],
+    sitemap: [`${siteUrl}/sitemap_index.xml`, `${siteUrl}/sitemap.xml`],
   };
 }

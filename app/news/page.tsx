@@ -3,18 +3,18 @@ import { ComingSoon } from "@/components/sections";
 import { createPageMetadata, siteUrl } from "@/lib/seo";
 
 export const metadata = createPageMetadata({
-  title: "Contact",
+  title: "News",
   description: "Mazuri Energy – coming soon.",
-  path: "/contact",
+  path: "/news",
 });
 
-export default function ContactPage() {
+export default function NewsPage() {
   return (
     <>
       <BreadcrumbJsonLd
         items={[
           { name: "Home", url: siteUrl },
-          { name: "Contact", url: `${siteUrl}/contact` },
+          { name: "News", url: `${siteUrl}/news` },
         ]}
       />
       <ComingSoon />

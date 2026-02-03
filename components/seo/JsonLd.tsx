@@ -1,14 +1,16 @@
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://mazurienergy.com";
+import { siteUrl, defaultDescription, siteName } from "@/lib/seo";
+
+const organizationId = `${siteUrl}/#organization`;
 
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Mazuri Energy",
+  "@id": organizationId,
+  name: siteName,
   alternateName: "Mazuri Energy Limited",
   url: siteUrl,
   logo: `${siteUrl}/logo.png`,
-  description:
-    "Oil and gas exploration and production company focused on Africa, particularly Nigeria. We find funding and provide technical services to asset owners, helping unlock value from oil and gas assets.",
+  description: defaultDescription,
   address: {
     "@type": "PostalAddress",
     streetAddress: "7A, Floor 71, Cooper Road, Off Bourdillon",
@@ -27,11 +29,26 @@ const organizationSchema = {
   sameAs: [],
 };
 
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: siteName,
+  url: siteUrl,
+  description: defaultDescription,
+  publisher: { "@id": organizationId },
+};
+
 export default function JsonLd() {
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+    </>
   );
 }

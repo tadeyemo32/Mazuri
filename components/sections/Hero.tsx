@@ -13,7 +13,7 @@ export default function Hero() {
         <div className="absolute inset-0 h-full w-full">
           <Image
             src={HERO_IMAGE}
-            alt=""
+            alt="Oil and gas exploration and production, Mazuri Energy"
             fill
             className="object-cover object-center"
             priority

@@ -1,11 +1,23 @@
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
 import { ComingSoon } from "@/components/sections";
-import type { Metadata } from "next";
+import { createPageMetadata, siteUrl } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Services | Mazuri Energy",
+export const metadata = createPageMetadata({
+  title: "Services",
   description: "Mazuri Energy – coming soon.",
-};
+  path: "/services",
+});
 
 export default function ServicesPage() {
-  return <ComingSoon />;
+  return (
+    <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: siteUrl },
+          { name: "Services", url: `${siteUrl}/services` },
+        ]}
+      />
+      <ComingSoon />
+    </>
+  );
 }
