@@ -45,10 +45,10 @@ export default function ServicesPreview() {
           />
         </FadeIn>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {services.map((service) => (
-            <Link key={service.title} href={service.href}>
-              <Card>
+            <Link key={service.title} href={service.href} className="block min-h-[120px] touch-manipulation">
+              <Card className="h-full">
                 <div className="w-10 h-10 text-[var(--color-gold)] mb-4 shrink-0">
                   <service.icon className="w-8 h-8" />
                 </div>

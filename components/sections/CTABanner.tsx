@@ -7,7 +7,7 @@ import Button from "@/components/ui/Button";
 export default function CTABanner() {
   return (
     <section className="py-16 md:py-24 bg-[#0d2137] text-white">
-      <div className="container mx-auto px-6 text-center">
+      <div className="container mx-auto px-4 sm:px-6 max-w-7xl text-center">
         <FadeIn>
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
             Get in touch
@@ -15,7 +15,7 @@ export default function CTABanner() {
           <p className="text-white/80 max-w-lg mx-auto mb-8">
             For enquiries, partnerships or general information, contact our team.
           </p>
-          <Link href="#contact">
+          <Link href="#contact" className="inline-block">
             <Button variant="secondary" size="lg">
               Contact us
             </Button>

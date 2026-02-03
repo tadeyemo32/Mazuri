@@ -23,18 +23,39 @@ const organizationSchema = {
     telephone: "+234-908-290-0450",
     email: "info@mazurienergy.com",
     contactType: "customer service",
-    areaServed: "NG",
+    areaServed: [
+      { "@type": "Country", name: "Nigeria", sameAs: "https://en.wikipedia.org/wiki/Nigeria" },
+      { "@type": "Place", name: "Africa" },
+    ],
     availableLanguage: "English",
+    availableChannel: { "@type": "ServiceChannel", serviceUrl: siteUrl },
   },
   sameAs: [],
+  inLanguage: "en",
+  areaServed: [
+    { "@type": "Country", name: "Nigeria" },
+    { "@type": "Place", name: "Africa" },
+  ],
+  knowsAbout: [
+    "Oil and gas exploration",
+    "Oil and gas production",
+    "E&P",
+    "Energy sector funding",
+    "Technical services for asset owners",
+    "Nigeria energy",
+    "Africa energy",
+  ],
 };
 
+const websiteId = `${siteUrl}/#website`;
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": websiteId,
   name: siteName,
   url: siteUrl,
   description: defaultDescription,
+  inLanguage: "en",
   publisher: { "@id": organizationId },
 };
 

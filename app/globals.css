@@ -35,6 +35,8 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -42,7 +44,10 @@ body {
   color: var(--color-text);
   font-family: var(--font-sans);
   overflow-x: hidden;
+  min-width: 320px;
   -webkit-tap-highlight-color: transparent;
+  padding-left: env(safe-area-inset-left, 0);
+  padding-right: env(safe-area-inset-right, 0);
 }
 
 ::selection {

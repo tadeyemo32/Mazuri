@@ -54,7 +54,7 @@ export default function WhyChooseUs() {
             </div>
           </ParallaxSection>
         </SlideIn>
-        <div className="container mx-auto px-6 max-w-7xl py-16 md:py-24">
+        <div className="container mx-auto px-4 sm:px-6 max-w-7xl py-16 md:py-24">
         <FadeIn>
           <SectionHeader
             overline="03. Our philosophy"

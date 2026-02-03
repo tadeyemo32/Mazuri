@@ -1,4 +1,5 @@
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
+import HomePageJsonLd from "@/components/seo/HomePageJsonLd";
 import {
   Hero,
   WeAreHere,
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
   description: defaultDescription,
   openGraph: {
     type: "website",
+    locale: "en_US",
     url: siteUrl,
     siteName,
     title: `${siteName} | Oil & Gas E&P | Nigeria & Africa`,
@@ -44,6 +46,7 @@ export default function Home() {
   return (
     <>
       <BreadcrumbJsonLd items={[{ name: "Home", url: siteUrl }]} />
+      <HomePageJsonLd />
       <Hero />
       <CertificationsPartners />
       <Stats />

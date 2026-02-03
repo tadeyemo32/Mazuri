@@ -59,11 +59,11 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 h-[72px] md:h-[88px] flex items-center justify-center transition-shadow duration-200 bg-[#0d2137] w-full max-w-full ${
+      className={`fixed top-0 left-0 right-0 z-50 h-[72px] md:h-[88px] flex items-center justify-center transition-shadow duration-200 bg-[#0d2137] w-full max-w-full pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)] ${
         isScrolled ? "shadow-lg shadow-black/20" : ""
       }`}
     >
-      <nav className="w-full h-full flex items-center px-6 md:px-8 max-w-[1200px] mx-auto min-w-0">
+      <nav className="w-full h-full flex items-center px-4 sm:px-6 md:px-8 max-w-[1200px] mx-auto min-w-0">
         <div className="flex items-center justify-between h-full w-full min-w-0 gap-2">
           <Link href="/" className="flex items-center shrink-0 h-full min-w-0 py-2" aria-label="Mazuri Energy home">
             <Image

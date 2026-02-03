@@ -16,7 +16,7 @@ export const defaultOgImage = {
 export const siteName = "Mazuri Energy";
 
 export const defaultDescription =
-  "Oil and gas exploration and production focused on Africa, particularly Nigeria. We find funding and provide technical services to asset owners, helping unlock value from oil and gas assets..";
+  "Oil and gas exploration and production focused on Africa, particularly Nigeria. We find funding and provide technical services to asset owners, helping unlock value from oil and gas assets.";
 
 /** Build full per-page metadata with Open Graph and Twitter (absolute image URLs). */
 export function createPageMetadata({
@@ -41,6 +41,7 @@ export function createPageMetadata({
     alternates: { canonical },
     openGraph: {
       type: "website",
+      locale: "en_US",
       url: canonical,
       siteName,
       title: ogTitle,

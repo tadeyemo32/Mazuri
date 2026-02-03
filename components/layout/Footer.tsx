@@ -9,8 +9,8 @@ const quickLinks = [
 
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-[#0d2137] text-white scroll-mt-20 overflow-x-hidden">
-      <div className="container mx-auto px-4 sm:px-6 py-10 md:py-14">
+    <footer id="contact" className="bg-[#0d2137] text-white scroll-mt-20 overflow-x-hidden pb-[env(safe-area-inset-bottom)]">
+      <div className="container mx-auto px-4 sm:px-6 py-10 md:py-14 max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-6 w-fit">
@@ -35,7 +35,7 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {quickLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-white/70 hover:text-white text-sm transition-colors">
+                  <Link href={link.href} className="text-white/70 hover:text-white text-sm transition-colors min-h-[44px] inline-flex items-center touch-manipulation">
                     {link.label}
                   </Link>
                 </li>
@@ -71,10 +71,10 @@ export default function Footer() {
             © {new Date().getFullYear()} Mazuri Energy. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm">
-            <Link href="/privacy" className="text-white/50 hover:text-white/80 transition-colors">
+            <Link href="/privacy" className="text-white/50 hover:text-white/80 transition-colors min-h-[44px] min-w-[44px] inline-flex items-center justify-center touch-manipulation">
               Privacy
             </Link>
-            <Link href="/terms" className="text-white/50 hover:text-white/80 transition-colors">
+            <Link href="/terms" className="text-white/50 hover:text-white/80 transition-colors min-h-[44px] min-w-[44px] inline-flex items-center justify-center touch-manipulation">
               Terms
             </Link>
           </div>

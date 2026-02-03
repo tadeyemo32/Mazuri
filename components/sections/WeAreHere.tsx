@@ -6,7 +6,7 @@ import { FadeIn } from "@/components/animations";
 export default function WeAreHere() {
   return (
     <section className="py-8 md:py-10 bg-[var(--color-bg-elevated)] border-y border-white/10">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
         <FadeIn>
           <h2 className="text-sm font-semibold uppercase tracking-wider text-[var(--color-text)] mb-6">
             We are here

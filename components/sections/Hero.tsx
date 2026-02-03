@@ -7,7 +7,7 @@ const HERO_IMAGE = "/hero.jpg";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[85vh] flex items-center bg-[#0d2137] text-white pt-24 pb-16 md:pt-28 md:pb-20 overflow-hidden">
+    <section className="relative min-h-[85vh] flex items-center bg-[#0d2137] text-white pb-16 md:pb-20 overflow-hidden pt-[calc(5rem+env(safe-area-inset-top,0px))] md:pt-[calc(7rem+env(safe-area-inset-top,0px))]">
       {/* Parallax background – scroll motion for depth */}
       <Parallax speed={0.25} className="absolute left-0 right-0 top-0 w-full min-h-[120%] -translate-y-[5%]">
         <div className="absolute inset-0 h-full w-full">

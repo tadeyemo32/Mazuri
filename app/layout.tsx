@@ -15,6 +15,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
+  viewportFit: "cover",
 };
 
 export const metadata: Metadata = {
@@ -41,6 +42,7 @@ export const metadata: Metadata = {
   creator: siteName,
   publisher: siteName,
   formatDetection: { email: false, address: false, telephone: false },
+  referrer: "strict-origin-when-cross-origin",
   openGraph: {
     type: "website",
     locale: "en_US",
